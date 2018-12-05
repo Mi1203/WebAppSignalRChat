@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Chat";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <h2>Chat-room</h2>
+
+    <div class="main">
+        <div id="loginBlock">
+            Enter login:<br />
+            <input id="txtUserName" class="from-control" type="text" />
+            <br/>
+            <input id="btnLogin" class="btn" type="button" value="Login" />
+        </div>
+        <div id="chatBody">
+            <div id="header"></div>
+            <div id="inputForm">
+                <input type="text" class="from-control" id="message" />
+                <br/>
+                <input type="button"class="btn" id="sendmessage" value="Send" />
+            </div>
+            <div id="chatroom"></div>
+
+            <div id="chatusers">
+                <p><b>All users :</b></p>
+            </div>
+        </div>
+        <input id="hdId" type="hidden" />
+        <input id="username" type="hidden" />
+    </div>
+    
+    @*Auto generation script from SignalR*@
+    <script src="~/signalr/hubs"></script>
+    <script src="~/Scripts/util.js"></script>
+
